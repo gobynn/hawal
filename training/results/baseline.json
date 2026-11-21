@@ -1,0 +1,6 @@
+{
+  "model": "TF-IDF (character 2-5 grams) + logistic regression",
+  "test_accuracy": 0.9089,
+  "test_macro_f1": 0.9041,
+  "test_size": 4181
+}

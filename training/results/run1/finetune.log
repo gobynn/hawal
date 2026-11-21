@@ -1,0 +1,26 @@
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at asosoft/KuBERT-Central-Kurdish-BERT-Model and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+epoch 1 step 100/2092 loss 1.5441 (19s)
+epoch 1 step 200/2092 loss 1.3766 (34s)
+epoch 1 step 300/2092 loss 1.2394 (51s)
+epoch 1 step 400/2092 loss 1.1434 (69s)
+epoch 1 step 500/2092 loss 1.0663 (86s)
+epoch 1 step 600/2092 loss 1.0089 (102s)
+epoch 1 step 700/2092 loss 0.9621 (118s)
+epoch 1 step 800/2092 loss 0.9196 (136s)
+epoch 1 step 900/2092 loss 0.8846 (154s)
+epoch 1 step 1000/2092 loss 0.8563 (171s)
+validation: {'step': 1046, 'epoch': 1, 'train_loss': 0.8438, 'val_accuracy': 0.815, 'val_macro_f1': 0.7972}
+epoch 2 step 1100/2092 loss 0.4689 (196s)
+epoch 2 step 1200/2092 loss 0.4460 (214s)
+epoch 2 step 1300/2092 loss 0.4433 (232s)
+epoch 2 step 1400/2092 loss 0.4398 (249s)
+epoch 2 step 1500/2092 loss 0.4333 (266s)
+epoch 2 step 1600/2092 loss 0.4251 (283s)
+epoch 2 step 1700/2092 loss 0.4196 (300s)
+epoch 2 step 1800/2092 loss 0.4185 (317s)
+epoch 2 step 1900/2092 loss 0.4165 (335s)
+epoch 2 step 2000/2092 loss 0.4134 (353s)
+validation: {'step': 2092, 'epoch': 2, 'train_loss': 0.4112, 'val_accuracy': 0.8408, 'val_macro_f1': 0.829}
+TEST: {'test_accuracy': 0.8466, 'test_macro_f1': 0.8368, 'training_minutes': 6.3}
+exit=0

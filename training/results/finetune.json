@@ -1,0 +1,104 @@
+{
+  "base_model": "asosoft/KuBERT-Central-Kurdish-BERT-Model",
+  "dataset": "nazimali/kurdish-news-headlines (CC BY 4.0)",
+  "train_size": 33441,
+  "val_size": 4180,
+  "test_size": 4181,
+  "epochs": 3,
+  "batch_size": 32,
+  "learning_rate": 4e-05,
+  "max_length": 48,
+  "device": "mps",
+  "training_minutes": 9.0,
+  "test_accuracy": 0.8713,
+  "test_macro_f1": 0.8648,
+  "per_label": {
+    "economic": {
+      "precision": 0.9045848822800495,
+      "recall": 0.8784596871239471,
+      "f1-score": 0.8913308913308914,
+      "support": 831.0
+    },
+    "health": {
+      "precision": 0.8116683725690891,
+      "recall": 0.8940248027057497,
+      "f1-score": 0.8508583690987125,
+      "support": 887.0
+    },
+    "science & technology": {
+      "precision": 0.8257575757575758,
+      "recall": 0.7758007117437722,
+      "f1-score": 0.8,
+      "support": 562.0
+    },
+    "social": {
+      "precision": 0.8325892857142857,
+      "recall": 0.8073593073593074,
+      "f1-score": 0.8197802197802198,
+      "support": 924.0
+    },
+    "sport": {
+      "precision": 0.9640287769784173,
+      "recall": 0.9600818833162743,
+      "f1-score": 0.9620512820512821,
+      "support": 977.0
+    },
+    "accuracy": 0.871322650083712,
+    "macro avg": {
+      "precision": 0.8677257786598835,
+      "recall": 0.8631452784498101,
+      "f1-score": 0.864804152452221,
+      "support": 4181.0
+    },
+    "weighted avg": {
+      "precision": 0.8722564592985348,
+      "recall": 0.871322650083712,
+      "f1-score": 0.8711811455937705,
+      "support": 4181.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      730,
+      30,
+      28,
+      31,
+      12
+    ],
+    [
+      13,
+      793,
+      23,
+      56,
+      2
+    ],
+    [
+      28,
+      41,
+      436,
+      49,
+      8
+    ],
+    [
+      30,
+      105,
+      30,
+      746,
+      13
+    ],
+    [
+      6,
+      8,
+      11,
+      14,
+      938
+    ]
+  ],
+  "labels": [
+    "economic",
+    "health",
+    "science & technology",
+    "social",
+    "sport"
+  ]
+}

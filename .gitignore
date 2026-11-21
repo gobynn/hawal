@@ -1,0 +1,21 @@
+# Python
+training/.venv/
+__pycache__/
+*.pyc
+
+# Derived data and large intermediate files (rebuild with the scripts)
+training/data/*.csv
+training/data/kubert-vocab.txt
+training/model/
+training/onnx-fp32/
+training/finetune.log
+
+# Web
+web/node_modules/
+web/.next/
+web/out/
+web/.vercel/
+web/.env*
+web/next-env.d.ts
+.DS_Store
+PROJECT.md

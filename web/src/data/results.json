@@ -1,0 +1,399 @@
+{
+  "dataset": {
+    "name": "Kurdish News Headlines",
+    "id": "nazimali/kurdish-news-headlines",
+    "license": "CC BY 4.0",
+    "url": "https://huggingface.co/datasets/nazimali/kurdish-news-headlines",
+    "raw_rows": 50000,
+    "clean_rows": 41802,
+    "splits": {
+      "train": 33441,
+      "validation": 4180,
+      "test": 4181
+    },
+    "label_counts": {
+      "sport": 9763,
+      "social": 9234,
+      "health": 8866,
+      "economic": 8316,
+      "science & technology": 5623
+    }
+  },
+  "base_model": {
+    "id": "asosoft/KuBERT-Central-Kurdish-BERT-Model",
+    "url": "https://huggingface.co/asosoft/KuBERT-Central-Kurdish-BERT-Model"
+  },
+  "training": {
+    "epochs": 3,
+    "batch_size": 32,
+    "learning_rate": 4e-05,
+    "max_length": 48,
+    "device": "mps",
+    "training_minutes": 9.0
+  },
+  "labels": [
+    "economic",
+    "health",
+    "science & technology",
+    "social",
+    "sport"
+  ],
+  "baseline": {
+    "model": "TF-IDF (character 2-5 grams) + logistic regression",
+    "test_accuracy": 0.9089,
+    "test_macro_f1": 0.9041,
+    "test_size": 4181
+  },
+  "finetuned": {
+    "test_accuracy": 0.8713,
+    "test_macro_f1": 0.8648
+  },
+  "deployed": {
+    "model": "fine-tuned KuBERT, ONNX, dynamic 8-bit quantization (the file the website runs)",
+    "size_mb": 82.3,
+    "test_accuracy": 0.872,
+    "test_macro_f1": 0.8656
+  },
+  "per_label": {
+    "economic": {
+      "precision": 0.9046,
+      "recall": 0.8785,
+      "f1-score": 0.8913,
+      "support": 831.0
+    },
+    "health": {
+      "precision": 0.8117,
+      "recall": 0.894,
+      "f1-score": 0.8509,
+      "support": 887.0
+    },
+    "science & technology": {
+      "precision": 0.8258,
+      "recall": 0.7758,
+      "f1-score": 0.8,
+      "support": 562.0
+    },
+    "social": {
+      "precision": 0.8326,
+      "recall": 0.8074,
+      "f1-score": 0.8198,
+      "support": 924.0
+    },
+    "sport": {
+      "precision": 0.964,
+      "recall": 0.9601,
+      "f1-score": 0.9621,
+      "support": 977.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      730,
+      30,
+      28,
+      31,
+      12
+    ],
+    [
+      13,
+      793,
+      23,
+      56,
+      2
+    ],
+    [
+      28,
+      41,
+      436,
+      49,
+      8
+    ],
+    [
+      30,
+      105,
+      30,
+      746,
+      13
+    ],
+    [
+      6,
+      8,
+      11,
+      14,
+      938
+    ]
+  ],
+  "log": [
+    {
+      "step": 100,
+      "epoch": 1,
+      "train_loss": 1.5272
+    },
+    {
+      "step": 200,
+      "epoch": 1,
+      "train_loss": 1.3698
+    },
+    {
+      "step": 300,
+      "epoch": 1,
+      "train_loss": 1.2283
+    },
+    {
+      "step": 400,
+      "epoch": 1,
+      "train_loss": 1.1124
+    },
+    {
+      "step": 500,
+      "epoch": 1,
+      "train_loss": 1.0303
+    },
+    {
+      "step": 600,
+      "epoch": 1,
+      "train_loss": 0.9691
+    },
+    {
+      "step": 700,
+      "epoch": 1,
+      "train_loss": 0.9142
+    },
+    {
+      "step": 800,
+      "epoch": 1,
+      "train_loss": 0.868
+    },
+    {
+      "step": 900,
+      "epoch": 1,
+      "train_loss": 0.8305
+    },
+    {
+      "step": 1000,
+      "epoch": 1,
+      "train_loss": 0.801
+    },
+    {
+      "step": 1046,
+      "epoch": 1,
+      "train_loss": 0.7894,
+      "val_accuracy": 0.8464,
+      "val_macro_f1": 0.8374
+    },
+    {
+      "step": 1100,
+      "epoch": 2,
+      "train_loss": 0.3054
+    },
+    {
+      "step": 1200,
+      "epoch": 2,
+      "train_loss": 0.3382
+    },
+    {
+      "step": 1300,
+      "epoch": 2,
+      "train_loss": 0.3326
+    },
+    {
+      "step": 1400,
+      "epoch": 2,
+      "train_loss": 0.3286
+    },
+    {
+      "step": 1500,
+      "epoch": 2,
+      "train_loss": 0.3288
+    },
+    {
+      "step": 1600,
+      "epoch": 2,
+      "train_loss": 0.3283
+    },
+    {
+      "step": 1700,
+      "epoch": 2,
+      "train_loss": 0.3272
+    },
+    {
+      "step": 1800,
+      "epoch": 2,
+      "train_loss": 0.3275
+    },
+    {
+      "step": 1900,
+      "epoch": 2,
+      "train_loss": 0.3242
+    },
+    {
+      "step": 2000,
+      "epoch": 2,
+      "train_loss": 0.3196
+    },
+    {
+      "step": 2092,
+      "epoch": 2,
+      "train_loss": 0.3179,
+      "val_accuracy": 0.8634,
+      "val_macro_f1": 0.8558
+    },
+    {
+      "step": 2100,
+      "epoch": 3,
+      "train_loss": 0.1918
+    },
+    {
+      "step": 2200,
+      "epoch": 3,
+      "train_loss": 0.1792
+    },
+    {
+      "step": 2300,
+      "epoch": 3,
+      "train_loss": 0.1838
+    },
+    {
+      "step": 2400,
+      "epoch": 3,
+      "train_loss": 0.1792
+    },
+    {
+      "step": 2500,
+      "epoch": 3,
+      "train_loss": 0.1751
+    },
+    {
+      "step": 2600,
+      "epoch": 3,
+      "train_loss": 0.1772
+    },
+    {
+      "step": 2700,
+      "epoch": 3,
+      "train_loss": 0.1794
+    },
+    {
+      "step": 2800,
+      "epoch": 3,
+      "train_loss": 0.1796
+    },
+    {
+      "step": 2900,
+      "epoch": 3,
+      "train_loss": 0.1804
+    },
+    {
+      "step": 3000,
+      "epoch": 3,
+      "train_loss": 0.1791
+    },
+    {
+      "step": 3100,
+      "epoch": 3,
+      "train_loss": 0.1788
+    },
+    {
+      "step": 3138,
+      "epoch": 3,
+      "train_loss": 0.1784,
+      "val_accuracy": 0.8715,
+      "val_macro_f1": 0.864
+    }
+  ],
+  "experiments": [
+    {
+      "name": "Run 1: KuBERT's default tokenizer settings (accent stripping on)",
+      "epochs": 2,
+      "learning_rate": 3e-05,
+      "test_accuracy": 0.8466,
+      "test_macro_f1": 0.8368,
+      "note": "Accent stripping removed the hamza from ئ, so 8.1% of tokens became [UNK]. Scored below the baseline."
+    },
+    {
+      "name": "Run 2: accent stripping off, ى/ھ normalised (final model)",
+      "epochs": 3,
+      "learning_rate": 4e-05,
+      "test_accuracy": 0.8713,
+      "test_macro_f1": 0.8648,
+      "note": "Unknown tokens fell to 4.6%, mostly punctuation and digits that KuBERT's vocabulary lacks."
+    }
+  ],
+  "samples": [
+    {
+      "text": "فرۆشی نەوت لە چارەگی یەکەمی ئەمساڵ (260) ملیۆن بەرمیل بووە",
+      "english": "Oil sales in the first quarter of this year were 260 million barrels",
+      "label": "economic"
+    },
+    {
+      "text": "به‌رهه‌می نه‌وتی هه‌رێمی کوردستان زیاد ده‌بێت",
+      "english": "Kurdistan Regional Government (KRG) oil production is increasing",
+      "label": "economic"
+    },
+    {
+      "text": "هەرێمی کوردستان و عێراق لە بواری ژینگە هەماهەنگی زیاتر دەکەن",
+      "english": "The Kurdistan Region and Iraq will further coordinate in the field of environment",
+      "label": "economic"
+    },
+    {
+      "text": "خۆت رزگار بکه‌ له‌ بۆنی ناخۆشی ده‌م",
+      "english": "Get rid of bad breath",
+      "label": "health"
+    },
+    {
+      "text": "وه‌زاره‌تی ته‌ندروستی ژماره‌یه‌ک رێکاری نوێی راگه‌یاند",
+      "english": "The Ministry of Health has announced a number of new measures",
+      "label": "health"
+    },
+    {
+      "text": "نیشانه‌کانی کۆرۆنا له‌سه‌ر پێستیش ده‌رده‌که‌وێت",
+      "english": "Symptoms also appear on the skin",
+      "label": "health"
+    },
+    {
+      "text": "له‌سه‌ر وێنه‌ فه‌یسبووک تایبه‌تمه‌ندییه‌کی گرنگی زیاد کرد",
+      "english": "Facebook has added an important feature to photos",
+      "label": "science & technology"
+    },
+    {
+      "text": "جیاوازی نێوان بانسی ئه‌سڵی‌ و بانسی عادی بزانه‌",
+      "english": "Know the difference between the original and ordinary bansi",
+      "label": "science & technology"
+    },
+    {
+      "text": "مایکرۆسۆفت بەکارهێنانی ئاپەکانی ئاندرۆید بۆ کۆمپیوتەر بەردەست دەخات",
+      "english": "Microsoft makes Android apps available for PC",
+      "label": "science & technology"
+    },
+    {
+      "text": "١١ کارێکی هونەری کە بۆت دەسەلمێنێت نابێت تەنها بە ڕوکەش بڕیار بدەیت",
+      "english": "11 works of art that prove you shouldn't judge by appearances",
+      "label": "social"
+    },
+    {
+      "text": "بەڕێوەبەری گشتی پێشوازی لە وەزیری کارو شاندێکی بەڕێوەبەرایەتی گشتی ڕۆشنبیری دەکات .",
+      "english": "Director General receives the Minister of Labor and a delegation of the General Directorate of Culture.",
+      "label": "social"
+    },
+    {
+      "text": "وێنە و ڤیدۆ: درامای “خەونەکان” پەخشدەکرێت",
+      "english": "Photos and Video: Drama “Dreams” will be broadcast",
+      "label": "social"
+    },
+    {
+      "text": "رۆماریۆ بۆ وه‌رگرتنی پۆستێکی گه‌وره‌ هاته‌وه‌ مه‌یدان",
+      "english": "Romario came back for a big position",
+      "label": "sport"
+    },
+    {
+      "text": "تیۆ هێرناندێز دوو هەفتە لە ریال مەدرید دادەبڕێت",
+      "english": "Theo Hernandez will be out of action for two weeks",
+      "label": "sport"
+    },
+    {
+      "text": "له‌ به‌رامبه‌ر بردنه‌وه‌یان له‌ ئه‌ڵمانیا، مه‌کسیک پاداشتی خه‌ڵکی کۆریای باشوور ده‌کات",
+      "english": "Mexico will reward the South Koreans for their victory over Germany",
+      "label": "sport"
+    }
+  ]
+}

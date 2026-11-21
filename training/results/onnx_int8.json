@@ -1,0 +1,6 @@
+{
+  "model": "fine-tuned KuBERT, ONNX, dynamic 8-bit quantization (the file the website runs)",
+  "size_mb": 82.3,
+  "test_accuracy": 0.872,
+  "test_macro_f1": 0.8656
+}
