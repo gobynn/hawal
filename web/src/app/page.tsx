@@ -18,7 +18,7 @@ function Section({ id, eyebrow, title, children }: { id: string; eyebrow: string
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div className="rounded-2xl border border-line bg-surface p-5">
-      <p className="text-3xl font-semibold tracking-tight tabular-nums">{value}</p>
+      <p className="text-2xl font-semibold tracking-tight tabular-nums sm:text-3xl">{value}</p>
       <p className="mt-1 text-sm text-ink-2">{label}</p>
     </div>
   )
@@ -78,7 +78,7 @@ export default function Home() {
       <Section id="results" eyebrow="Results" title={r.finetuned.test_accuracy > r.baseline.test_accuracy
         ? `Fine-tuning beats the classical baseline by ${((r.finetuned.test_accuracy - r.baseline.test_accuracy) * 100).toFixed(1)} points`
         : "How fine-tuning compares with a classical baseline"}>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           <Stat value={pct(r.finetuned.test_accuracy)} label="test accuracy, fine-tuned KuBERT" />
           <Stat value={pct(r.finetuned.test_macro_f1)} label="macro F1 across the 5 topics" />
           <Stat value={`${t.training_minutes} min`} label={`training time, ${t.epochs} epochs on Apple M4 Pro`} />
@@ -182,7 +182,7 @@ export default function Home() {
       </Section>
 
       <footer className="border-t border-line py-10 text-sm text-ink-2">
-        Hawal · a university AI project by Adam · <a href={GITHUB} className="underline underline-offset-4 hover:text-ink">source and training code</a>
+        Hawal · AI course project by Baxan Hamid · <a href={GITHUB} className="underline underline-offset-4 hover:text-ink">source and training code</a>
       </footer>
     </main>
   )
